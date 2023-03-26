@@ -1,5 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import Notiflix from 'notiflix';
 
 const refs = {
   startBtn: document.querySelector('button[data-start]'),
@@ -27,7 +28,7 @@ refs.startBtn.addEventListener('click', () => {
   const currentDate = new Date();
   const endDate = new Date(selectedDate);
   if (endDate < currentDate) {
-    window.alert('Please choose a date in the future');
+    Notiflix.Notify.failure('Please choose a date in the future');
     return;
   }
   const deltaDate = endDate - currentDate;
