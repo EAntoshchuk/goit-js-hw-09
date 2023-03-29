@@ -26,9 +26,9 @@ function createPromise(position, delay) {
 
 function onClick(e) {
   e.preventDefault();
-  delay = Number(refs.delayEl.value);
-  step = Number(refs.stepEl.value);
-  amount = Number(refs.amountEl.value);
+  const delay = Number(refs.delayEl.value);
+  const step = Number(refs.stepEl.value);
+  const amount = Number(refs.amountEl.value);
   console.log(delay);
 
   for (let i = 1; i <= amount; i += 1) {
